@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Mechanic"
+    }
+  },
+  "defaultProject": "Mechanic",
+  "cli": {
+    "analytics": "634e4ae5-0b80-464b-a4f6-b29ffc9fef07"
+  }
 }
