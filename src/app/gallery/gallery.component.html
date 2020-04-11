@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h1 class="text-center">הגלריה שלנו</h1>
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+      <img class="swiper-slide" *ngFor="let image of images" [src]="image" />
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+</div>
