@@ -11,7 +11,7 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit() {
   }
-  sendMessage() {
+  sendMessage(event: any) {
     alert('ההודעה נשלחה');
   }
 
