@@ -1,0 +1,69 @@
+<div class="container">
+  <h1 class="text-center">צור קשר</h1>
+  <div class="row mt-5">
+    <div class="col-sm" style="text-align: right;">
+      <h4>צרו איתנו קשר:</h4>
+      <div class="row mt-5">
+        <div class="col-sm-6">
+          <span class="ui-float-label">
+            <input id="float-input" type="text" size="30" pInputText />
+            <label for="float-input">שם מלא*</label>
+          </span>
+          <span class="ui-float-label">
+            <input id="float-input" type="email" size="30" pInputText />
+            <label for="float-input">דואר אלקטרוני*</label>
+          </span>
+          <span class="ui-float-label">
+            <input id="float-input" type="tel" size="30" pInputText />
+            <label for="float-input">מספר טלפון*</label>
+          </span>
+        </div>
+        <div class="col-sm-6">
+          <span class="ui-float-label">
+            <textarea
+              id="float-input"
+              rows="5"
+              cols="30"
+              pInputTextarea
+              autoResize="autoResize"
+            ></textarea>
+            <label for="float-input">הודעה*</label>
+          </span>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-sm-6" style="color: gray;">
+          ניצור איתך קשר תוך יום עסקים
+        </div>
+        <div class="col-sm-6" style="text-align: center;">
+          <p-button
+            label="שלח הודעה"
+            icon="pi pi-angle-left"
+            iconPos="left"
+            (onClick)="sendMessage($event)"
+          ></p-button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <img
+        src="../../assets/image-out-service/image_03-390x260.jpg"
+        class="card-img-bottom card-img-top"
+      />
+      <div class="row mt-2">
+        <div class="col-sm-6 mb-2">
+          <img
+            src="../../assets/image-out-service/image_04-390x260.jpg"
+            class="card-img-top card-img-bottom"
+          />
+        </div>
+        <div class="col-sm-6 mb-2">
+          <img
+            src="../../assets/image-out-service/image_06-390x260.jpg"
+            class="card-img-top card-img-bottom"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

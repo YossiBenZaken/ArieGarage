@@ -1,3 +1,5 @@
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutComponent } from './about/about.component';
 import { OurServiceComponent } from './our-service/our-service.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path: 'our-service',
     component: OurServiceComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent
   }
 ];
 

@@ -1,0 +1,59 @@
+img {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+img:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+@font-face {
+  font-family: "template-cs";
+  src: url("../../assets/fonts/template-cs.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+}
+.list li {
+  padding-right: 28px;
+  padding-left: 0;
+  list-style: none;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 14px;
+  line-height: 24px;
+  border: none;
+}
+li.template-bullet::before {
+  float: right;
+  padding-left: 10px;
+  padding-right: 0;
+  margin-right: -30px;
+  margin-left: 0;
+  margin-top: 3px;
+  color: #1e69b8;
+  vertical-align: text-top;
+  font-size: 18px;
+}
+.template-bullet::before {
+  content: "i";
+}
+[class^="template-"]:before,
+[class*=" template-"]:before {
+  font-family: "template-cs" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  vertical-align: middle;
+  line-height: 1;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
