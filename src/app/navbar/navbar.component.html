@@ -1,13 +1,39 @@
-<div
-  class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom p-3 px-md-4 mb-3"
 >
   <h5 class="my-0 ml-md-auto"><img src="assets/logo.jpg" class="logo" /></h5>
-  <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark" routerLink="">דף הבית</a>
-    <a class="p-2 text-dark" routerLink="gallery">גלריה</a>
-    <a class="p-2 text-dark" routerLink="our-service">שירותי המוסך</a>
-    <a class="p-2 text-dark" routerLink="about">אודות</a>
-    <a class="p-2 text-dark" routerLink="contact-us">צור קשר</a>
-    <a class="p-2 text-dark" href="#">הזמן תור</a>
-  </nav>
-</div>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item text-center">
+        <a class="p-2 text-dark" routerLink="">דף הבית</a>
+      </li>
+      <li class="nav-item text-center">
+        <a class="p-2 text-dark" routerLink="gallery">גלריה</a>
+      </li>
+      <li class="nav-item text-center">
+        <a class="p-2 text-dark" routerLink="our-service">שירותי המוסך</a>
+      </li>
+      <li class="nav-item text-center">
+        <a class="p-2 text-dark" routerLink="about">אודות</a>
+      </li>
+      <li class="nav-item text-center">
+        <a class="p-2 text-dark" routerLink="contact-us">צור קשר</a>
+      </li>
+      <!-- <li class="nav-item text-center">
+        <a class="p-2 text-dark" routerLink="contact-us">הזמן תור</a>
+      </li> -->
+    </ul>
+  </div>
+</nav>

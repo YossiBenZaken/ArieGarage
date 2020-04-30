@@ -9,23 +9,29 @@ import { GalleryComponent } from './gallery/gallery.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { animation: 'Home' }
   },
   {
     path: 'gallery',
-    component: GalleryComponent
+    component: GalleryComponent,
+    data: { animation: 'Gallery' }
   },
   {
     path: 'our-service',
-    component: OurServiceComponent
+    component: OurServiceComponent,
+    data: { animation: 'OurService' }
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: { animation: 'About' }
   },
   {
     path: 'contact-us',
-    component: ContactUsComponent
+    component: ContactUsComponent,
+    data: { animation: 'ContactUs' }
+
   }
 ];
 
