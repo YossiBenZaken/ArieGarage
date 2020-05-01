@@ -10,7 +10,7 @@ import { fader } from './route-animations';
   ]
 })
 export class AppComponent {
-  title = 'Mechanic';
+  date = new Date().getFullYear();
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }

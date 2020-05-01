@@ -7,20 +7,18 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { GalleryComponent } from './gallery/gallery.component';
-import { FooterComponent } from './footer/footer.component';
 import { OurServiceComponent } from './our-service/our-service.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     GalleryComponent,
-    FooterComponent,
     OurServiceComponent,
     AboutComponent,
     ContactUsComponent
