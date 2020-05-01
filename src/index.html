@@ -8,6 +8,79 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
-    <app-root></app-root>
+    <style>
+      .gear {
+        width: 100px;
+        height: 100px;
+
+        background: linear-gradient(to bottom right, #ffffff -4%, #cccccc 100%);
+        border-radius: 500px;
+        position: relative;
+        left: 40vw;
+        top: 40vh;
+        animation: spin 2s linear infinite;
+      }
+      .gear-inner {
+        background: #fff;
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+        z-index: 99;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+      .teeth {
+        width: 120px;
+        height: 20px;
+
+        background: linear-gradient(to bottom right, #ffffff -4%, #cccccc 100%);
+        position: relative;
+      }
+      #teeth1 {
+        top: 42px;
+        left: -10px;
+      }
+      #teeth2 {
+        top: 20px;
+        left: -10px;
+        transform: rotateZ(90deg);
+      }
+      #teeth3 {
+        top: 0px;
+        left: -10px;
+        transform: rotateZ(45deg);
+      }
+      #teeth4 {
+        top: -20px;
+        left: -10px;
+        transform: rotateZ(135deg);
+      }
+      @keyframes spin {
+        0% {
+          transform: rotateZ(0deg);
+        }
+        100% {
+          transform: rotateZ(360deg);
+        }
+      }
+      @keyframes spinback {
+        0% {
+          transform: rotateZ(0deg);
+        }
+        100% {
+          transform: rotateZ(-360deg);
+        }
+      }
+    </style>
+    <app-root>
+      <div class="gear" id="gear1">
+        <div class="teeth" id="teeth1"></div>
+        <div class="teeth" id="teeth2"></div>
+        <div class="teeth" id="teeth3"></div>
+        <div class="teeth" id="teeth4"></div>
+        <div class="gear-inner"></div>
+      </div>
+    </app-root>
   </body>
 </html>
