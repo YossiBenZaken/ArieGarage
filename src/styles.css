@@ -7,3 +7,6 @@ main {
   text-align: center;
   position: relative;
 }
+.container {
+  margin-top: 12vh;
+}
