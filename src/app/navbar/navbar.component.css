@@ -1,6 +1,57 @@
 .logo {
-  height: 100px;
+  height: 8vh;
 }
 .text-center {
   font-size: 2vh;
+}
+@media (max-width: 990px) {
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+  }
+  .menu-btn__burger {
+    width: 25px;
+    height: 5px;
+    background: #000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 5px;
+    background: #000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-9px) translateX(25px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(9px) translateX(25px);
+  }
+  /* Animation */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-25px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
 }
