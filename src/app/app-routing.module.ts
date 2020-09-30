@@ -1,3 +1,4 @@
+import { AdminComponent } from './admin/admin.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
 import { OurServiceComponent } from './our-service/our-service.component';
@@ -31,7 +32,10 @@ const routes: Routes = [
     path: 'contact-us',
     component: ContactUsComponent,
     data: { animation: 'ContactUs' }
-
+  },
+  {
+    path: 'dashboard-admin',
+    component: AdminComponent
   }
 ];
 
