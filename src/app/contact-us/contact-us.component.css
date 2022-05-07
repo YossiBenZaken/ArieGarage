@@ -13,12 +13,6 @@ img:hover {
 span {
   margin-bottom: 1.2rem;
 }
-@font-face {
-  font-family: "template-cs";
-  src: url("../../assets/fonts/template-cs.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 ol,
 ul {
   list-style: none;
@@ -53,7 +47,8 @@ li.template-bullet::before {
 }
 [class^="template-"]:before,
 [class*=" template-"]:before {
-  font-family: "template-cs" !important;
+  font-family: "FontAwesome";
+  content: "\f00c";
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;

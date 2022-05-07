@@ -1,60 +1,60 @@
 <div class="container">
   <h1 class="text-center">צור קשר</h1>
   <div class="row mt-5">
-    <div class="col-sm" style="text-align: right;">
+    <div class="col-sm" style="text-align: right">
       <h4>צרו איתנו קשר:</h4>
       <div class="row mt-5">
         <div class="col-sm-6">
           <span class="ui-float-label">
             <input
-              id="float-input"
+              id="fullname"
               type="text"
               size="30"
               pInputText
-              [formControl]="fullName"
+              [(ngModel)]="name"
             />
-            <label for="float-input">שם מלא*</label>
+            <label for="fullname">שם מלא*</label>
           </span>
           <span class="ui-float-label">
             <input
-              id="float-input"
+              id="email"
               type="email"
               size="30"
               pInputText
-              [formControl]="email"
+              [(ngModel)]="email"
             />
-            <label for="float-input">דואר אלקטרוני*</label>
+            <label for="email">דואר אלקטרוני*</label>
           </span>
           <span class="ui-float-label">
             <input
-              id="float-input"
+              id="phone"
               type="tel"
               size="30"
               pInputText
-              [formControl]="phone"
+              [(ngModel)]="phone"
             />
-            <label for="float-input">מספר טלפון*</label>
+            <label for="phone">מספר טלפון*</label>
           </span>
         </div>
         <div class="col-sm-6">
           <span class="ui-float-label">
             <textarea
-              id="float-input"
+              id="message"
               rows="5"
               cols="30"
               pInputTextarea
               autoResize="autoResize"
-              [formControl]="message"
+              [(ngModel)]="message"
             ></textarea>
-            <label for="float-input">הודעה*</label>
+            <label for="message">הודעה*</label>
           </span>
         </div>
       </div>
       <div class="row mt-3">
-        <div class="col-sm-6" style="color: gray;">
+        <div class="col-sm-6" style="color: gray">
           ניצור איתך קשר תוך יום עסקים
         </div>
-        <div class="col-sm-6" style="text-align: center;">
+        <div class="col-sm-6" style="text-align: center">
           <p-button
             label="שלח הודעה"
             icon="pi pi-angle-left"

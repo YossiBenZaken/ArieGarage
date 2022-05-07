@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { InputTextModule } from 'primeng/inputtext';
@@ -13,8 +14,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule } from 'angularfire2';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,22 +26,23 @@ import { ReactiveFormsModule } from '@angular/forms';
     GalleryComponent,
     OurServiceComponent,
     AboutComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NgxUsefulSwiperModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     AppRoutingModule,
     InputTextModule,
+    FormsModule,
+    ReactiveFormsModule,
     InputTextareaModule,
     ButtonModule,
-    HttpClientModule,
-    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

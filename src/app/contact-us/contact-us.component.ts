@@ -1,25 +1,29 @@
+import { Contact } from './../models/contact';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Ticket, TicketsService } from '../services/tickets.service';
+import { AngularFirestore } from 'angularfire2/firestore';
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.css']
+  styleUrls: ['./contact-us.component.css'],
 })
-export class ContactUsComponent {
-  fullName = new FormControl('');
-  email = new FormControl('');
-  phone = new FormControl('');
-  message = new FormControl('');
-  constructor(private _ticketService: TicketsService) { }
-  sendMessage() {
-    const body: Ticket = {
-      fullName: this.fullName.value,
-      email: this.email.value,
-      phone: this.phone.value,
-      message: this.message.value
-    };
-    this._ticketService.createTicket(body).subscribe(res => console.log(res));
-  }
+export class ContactUsComponent implements OnInit {
+  name = '';
+  email = '';
+  phone = '';
+  message = '';
+  constructor(private db: AngularFirestore) {}
 
+  ngOnInit() {}
+  sendMessage() {
+    const message: Contact = {
+      name: this.name,
+      email: this.email,
+      phone: this.phone,
+      message: this.message,
+    };
+    console.log(message);
+    this.db.collection('/contact').add(message);
+    // alert('ההודעה נשלחה');
+  }
 }
