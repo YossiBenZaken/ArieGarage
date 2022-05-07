@@ -6,15 +6,33 @@
       <div class="row mt-5">
         <div class="col-sm-6">
           <span class="ui-float-label">
-            <input id="float-input" type="text" size="30" pInputText />
+            <input
+              id="float-input"
+              type="text"
+              size="30"
+              pInputText
+              [formControl]="fullName"
+            />
             <label for="float-input">שם מלא*</label>
           </span>
           <span class="ui-float-label">
-            <input id="float-input" type="email" size="30" pInputText />
+            <input
+              id="float-input"
+              type="email"
+              size="30"
+              pInputText
+              [formControl]="email"
+            />
             <label for="float-input">דואר אלקטרוני*</label>
           </span>
           <span class="ui-float-label">
-            <input id="float-input" type="tel" size="30" pInputText />
+            <input
+              id="float-input"
+              type="tel"
+              size="30"
+              pInputText
+              [formControl]="phone"
+            />
             <label for="float-input">מספר טלפון*</label>
           </span>
         </div>
@@ -26,6 +44,7 @@
               cols="30"
               pInputTextarea
               autoResize="autoResize"
+              [formControl]="message"
             ></textarea>
             <label for="float-input">הודעה*</label>
           </span>
@@ -40,7 +59,7 @@
             label="שלח הודעה"
             icon="pi pi-angle-left"
             iconPos="left"
-            (onClick)="sendMessage($event)"
+            (onClick)="sendMessage()"
           ></p-button>
         </div>
       </div>
